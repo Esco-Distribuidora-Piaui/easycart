@@ -1,8 +1,8 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -31,26 +31,4 @@ body {
     text-wrap: balance;
   }
 } */
- 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-header, footer {
-  background-color: #f8f9fa;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #0070f3;
-}
-
-main {
-  padding: 2rem;
-}
