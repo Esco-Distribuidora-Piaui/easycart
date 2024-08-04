@@ -1,38 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import ProductModal from './ProductModal';
 import styles from '../styles/ProductCardAdmin.module.css';
+import ProductModalAdmin from './ProductModalAdmin';
 
+// Exemplo de onde renderizar o modal
 const ProductCardAdmin = ({ product }) => {
-  const { name, price, description, image, status, id } = product;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleEditClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSave = (updatedProduct) => {
+    // Adicione lógica para salvar as alterações
+    console.log('Produto atualizado:', updatedProduct);
+    handleClose();
+  };
 
   return (
-    <div className={styles.productCardAdmin}>
-      <div className={styles.productCardImage}>
-        <Image 
-          src={image} 
-          alt={name} 
-          width={300}
-          height={300} 
-          layout="responsive" 
-        />
-      </div>
-      <div className={styles.productCardDetails}>
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <div className={styles.info}>
-            <p>{price}</p>
-            <p>{status}</p>
+    <>
+      <div className={styles.productCardAdmin}>
+        <div className={styles.productCardImage}>
+          <Image 
+            src={product.image} 
+            alt={product.name} 
+            width={300}
+            height={300} 
+            layout="responsive" 
+          />
+        </div>
+        <div className={styles.productCardDetails}>
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+          <div className={styles.info}>
+            <p>{product.price}</p>
+            <p>{product.status}</p>
+          </div>
+        </div>
+        <div className={styles.editIcon} onClick={handleEditClick}>
+          <Image
+            src="/icons/edit.svg"
+            alt="Editar Produto"
+            width={30}
+            height={30}
+          />
         </div>
       </div>
-      <div className={styles.editIcon}>
-        <Image
-          src="/icons/edit.svg"
-          alt="Editar Produto"
-          width={30}
-          height={30}
+      {isModalOpen && (
+        <ProductModalAdmin
+          product={product}
+          onClose={handleClose}
+          onSave={handleSave}
         />
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
