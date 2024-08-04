@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #1E56A0;
+  --primary-color: #1e56a0;
+  --page-bg-color: rgb(251, 249, 241);
+  --secondary-color: rgb(229, 225, 218);
 }
 
 /*@media (prefers-color-scheme: dark) {
@@ -29,4 +31,3 @@ body {
     text-wrap: balance;
   }
 } */
-
