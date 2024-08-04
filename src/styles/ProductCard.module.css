@@ -9,7 +9,7 @@
     text-align: center;
     color: var(--primary-color);
     transition: transform 0.2s ease;
-    position: relative; /* Adicione esta linha */
+    position: relative;
 }
 
 .productCard:hover {
@@ -48,10 +48,10 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
-    opacity: 0; /* Oculta o ícone por padrão */
-    transition: opacity 0.2s ease; /* Suaviza a transição de visibilidade */
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .productCard:hover .cartIcon {
-    opacity: 1; /* Torna o ícone visível quando o card é 'hovered' */
+    opacity: 1;
 }

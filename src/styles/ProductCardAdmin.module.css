@@ -12,7 +12,7 @@
     color: var(--primary-color);
     padding: 10px;
     align-items: center;
-    position: relative; /* Adicione esta linha */
+    position: relative;
 }
 
 .productCardAdmin:hover {
@@ -22,7 +22,7 @@
 }
 
 .productCardAdmin:hover .editIcon {
-    opacity: 1; /* Torna o ícone visível */
+    opacity: 1;
 }
 
 .productCardImage {
