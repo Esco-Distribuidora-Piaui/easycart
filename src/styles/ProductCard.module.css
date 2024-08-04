@@ -1,0 +1,57 @@
+.productCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--primary-color);
+    transition: transform 0.2s ease;
+    position: relative; /* Adicione esta linha */
+}
+
+.productCard:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: var(--primary-color) 0 0 10px;
+}
+
+.productCard img {
+    padding: 5px;
+}
+
+.productInfo {
+    margin-top: 16px;
+}
+
+.productName {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.productPrice {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.productStatus {
+    font-size: 0.8rem;
+    color: #228B22;
+    font-weight: bold;
+}
+
+.cartIcon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0; /* Oculta o ícone por padrão */
+    transition: opacity 0.2s ease; /* Suaviza a transição de visibilidade */
+}
+
+.productCard:hover .cartIcon {
+    opacity: 1; /* Torna o ícone visível quando o card é 'hovered' */
+}
