@@ -43,6 +43,7 @@
     text-align: left;
     display: flex;
     justify-content: space-evenly;
+    flex: 1;
 }
 
 .productCardDetails {
@@ -51,6 +52,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.productCardDetails h2,
+.productCardDetails p {
+    white-space: nowrap; /* Impede a quebra de linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências (...) ao final do texto que excede */
 }
 
 .productCardDetails h2 {
@@ -64,7 +73,7 @@
     font-size: 16px;
     margin: 0;
     text-align: center;
-}  
+}
 
 .editIcon {
     position: absolute;
