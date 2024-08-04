@@ -52,6 +52,14 @@
     transition: opacity 0.2s ease;
 }
 
-.productCard:hover .cartIcon {
+.detailsIcon {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.productCard:hover .cartIcon, .productCard:hover .detailsIcon {
     opacity: 1;
 }
