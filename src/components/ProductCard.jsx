@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
     <>
       <div className={styles.productCard} onClick={openModal}>
         <div className={styles.imageWrapper}>
-          <Image 
+          <Image className={styles.productImage}
             src={product.image} 
             alt={product.name} 
             width={100} 
