@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 } */
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; 
+  justify-content: left; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+  padding: 20px;
+}

@@ -22,7 +22,7 @@ const Header = () => {
         <div className="flex-1">
           <Link href="/" passHref>
             <span className="btn btn-ghost text-xl mr-4 flex items-center cursor-pointer">
-              <img src="/logo-esco.png" alt="Logo" className="h-8 w-8 mr-2" />
+              
               EasyCart
             </span>
           </Link>
