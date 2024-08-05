@@ -8,7 +8,7 @@ const ProductModal = ({ product, onClose }) => {
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>x</button>
         <div className={styles.modalHeader}>
-          <h2>{product.name}</h2>
+          <h1>Detalhes do Produto</h1>
         </div>
         <div className={styles.modalBody}>
           <div className={styles.modalImage}>
@@ -21,10 +21,23 @@ const ProductModal = ({ product, onClose }) => {
             />
           </div>
           <div className={styles.modalDetails}>
+            <h2>{product.name}</h2>
             <h3>Descrição</h3>
             <h4>{product.description}</h4>
-            <p><strong>Preço:</strong> {product.price}</p>
-            <p><strong>Status:</strong> {product.status}</p>
+            <div className={styles.cart}>
+              <div>
+                <p><strong>Preço:</strong> {product.price}</p>
+                <p><strong>Status:</strong> {product.status}</p>
+              </div>
+              <button className={styles.addToCartButton}>
+                  <Image 
+                  src="/icons/cart.svg" 
+                  alt="Adicionar ao Carrinho" 
+                  width={30} 
+                  height={30} 
+                />
+                Adicionar ao Carrinho</button>
+            </div>
           </div>
         </div>
       </div>
