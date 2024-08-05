@@ -1,11 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --primary-color: #1e56a0;
   --page-bg-color: rgb(251, 249, 241);
   --secondary-color: rgb(229, 225, 218);
+  --bg-white-pastel-login: rgb(229, 225, 218);
 }
 
 /*@media (prefers-color-scheme: dark) {
@@ -35,8 +36,8 @@ body {
 .productContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; 
-  justify-content: left; 
+  gap: 16px;
+  justify-content: left;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: 1fr;
   padding: 20px;

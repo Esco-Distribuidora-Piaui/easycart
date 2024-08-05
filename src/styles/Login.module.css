@@ -1,0 +1,44 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-white-pastel-login);
+}
+
+.loginFormWrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.loginTitle {
+  color: #1e56a0;
+  margin-bottom: 2rem;
+}
+
+.inputText {
+  background-color: #333;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.inputText::placeholder {
+  color: #888;
+}
+
+.inputText:focus,
+.inputText:autofill,
+.inputText:autofill:hover,
+.inputText:autofill:focus,
+.inputText:autofill:active {
+  background-color: #333 !important;
+  color: white !important;
+  -webkit-box-shadow: 0 0 0 30px #333 inset !important;
+  -webkit-text-fill-color: white !important;
+}
