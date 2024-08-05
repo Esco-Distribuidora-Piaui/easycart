@@ -9,6 +9,10 @@
   --bg-white-pastel-login: rgb(229, 225, 218);
 }
 
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 /*@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
