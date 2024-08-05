@@ -23,6 +23,8 @@ const ProductModalAdmin = ({ product, onClose, onSave }) => {
     { value: 'Fora de Estoque', label: 'Fora de Estoque' },
   ];
 
+  const tags = ["Papel", "Capa para encadernação", "Polaseal"];
+
   return (
     <div className={styles.modalBackdrop} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -70,6 +72,21 @@ const ProductModalAdmin = ({ product, onClose, onSave }) => {
                   onChange={handleChange} 
                   required 
                 />
+              </label>
+              <label>
+                <h3>Tag</h3>
+                <select 
+                  name="tag" 
+                  value={formData.tag} 
+                  onChange={handleChange} 
+                  required
+                >
+                  {tags.map((tag) => (
+                    <option key={tag} value={tag}>
+                      {tag}
+                    </option>
+                  ))}
+                </select>
               </label>
               <label>
                 <h3>Status</h3>

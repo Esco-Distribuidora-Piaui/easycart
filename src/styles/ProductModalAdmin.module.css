@@ -22,13 +22,16 @@
     position: relative;
     overflow: hidden;
     color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color) ;
 }
 
 .modalHeader {
     padding: 10px;
     text-align: center;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-bottom: var(--primary-color) 2px solid;
+    font-weight: bold;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     font-size: 1.5rem;
@@ -69,6 +72,7 @@
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .modalDetails h4 {
@@ -98,7 +102,8 @@
     border-radius: 4px;
     font-size: 1rem;
     background-color: #fff;
-    color: #333;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .modalDetails select:focus, .modalDetails input:focus,
@@ -114,9 +119,14 @@
     right: 20px;
     border: none;
     background: transparent;
-    color: white;
+    color: var(--primary-color);
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+    transform: scale(1.2);
 }
 
 .modalDetails input,
@@ -127,7 +137,8 @@
     border-radius: 4px;
     font-size: 1rem;
     background-color: #fff;
-    color: #333;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .modalDetails textarea {
@@ -144,4 +155,11 @@
     cursor: pointer;
     font-size: 1rem;
     align-self: center; 
+}
+
+.saveButton:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--primary-color) ;
 }
