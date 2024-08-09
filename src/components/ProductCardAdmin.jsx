@@ -4,7 +4,6 @@ import ProductModal from './ProductModal';
 import styles from '../styles/ProductCardAdmin.module.css';
 import ProductModalAdmin from './ProductModalAdmin';
 
-// Exemplo de onde renderizar o modal
 const ProductCardAdmin = ({ product }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -17,7 +16,7 @@ const ProductCardAdmin = ({ product }) => {
   };
 
   const handleSave = (updatedProduct) => {
-    // Adicione lógica para salvar as alterações
+    // Adicionar lógica para salvar as alterações
     console.log('Produto atualizado:', updatedProduct);
     handleClose();
   };
@@ -37,10 +36,8 @@ const ProductCardAdmin = ({ product }) => {
         <div className={styles.productCardDetails}>
           <h2>{product.name}</h2>
           <p>{product.description}</p>
-          <div className={styles.info}>
-            <p>{product.price}</p>
-            <p>{product.status}</p>
-          </div>
+          <p>{product.price}</p>
+          <p>{product.status}</p>
         </div>
         <div className={styles.editIcon} onClick={handleEditClick}>
           <Image

@@ -16,13 +16,16 @@
 }
 
 .productCardAdmin:hover {
-    cursor: pointer;
     transform: scale(1.05);
-    box-shadow: var(--primary-color) 0 0 10px;
+    box-shadow: var(--primary-color) 0 0 5px;
 }
 
 .productCardAdmin:hover .editIcon {
     opacity: 1;
+}
+
+.editIcon:hover {
+    cursor: pointer;
 }
 
 .productCardImage {
@@ -39,15 +42,8 @@
     margin-left: 10px;
 }
 
-.info {
-    text-align: left;
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1;
-}
-
 .productCardDetails {
-    flex: 2;
+    flex: 2; 
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -66,13 +62,13 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .productCardDetails p {
     font-size: 16px;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .editIcon {
