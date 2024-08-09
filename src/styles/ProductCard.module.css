@@ -55,7 +55,8 @@
     font-weight: bold;
     margin-bottom: 8px; 
     display: inline-block;
-    overflow: hidden; 
+    overflow: hidden;
+    white-space: nowrap;  
     text-overflow: ellipsis; 
     max-width: 175px; 
 }
