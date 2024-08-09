@@ -9,10 +9,7 @@
     align-items: center;
     overflow-y: auto;
     max-height: 80vh;
-}
-
-.sidebar img {
-    margin-bottom: 30px;
+    margin-top: 60px;
 }
   
 .tagList {

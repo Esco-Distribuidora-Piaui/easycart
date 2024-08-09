@@ -17,12 +17,6 @@ const FilterSidebar = ({ onFilterChange }) => {
 
   return (
     <aside className={styles.sidebar}>
-      <Image
-        src="/logo-esco.png"
-        alt="Logo"
-        width={180}
-        height={140}
-      />
       <h2>Filtros:</h2>
       <ul className={styles.tagList}>
         {tags.map(tag => (
