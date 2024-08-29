@@ -239,12 +239,14 @@ const Header = () => {
                 className={`menu menu-sm dropdown-content ${menuBgColor} ${textGrayColor} rounded-box z-[1] mt-3 w-52 p-2 shadow`}
               >
                 <li>
-                  <a className={`justify-between ${menuHoverBgColor}`}>
-                    Profile
+                  <Link href="/admin" passHref>
+                    {/* <a className={`justify-between ${menuHoverBgColor}`}> */}
+                    Meus Produtos
                     <span className={`badge ${badgeBgColor} ${textColor}`}>
                       New
                     </span>
-                  </a>
+                    {/* </a> */}
+                  </Link>
                 </li>
                 <li>
                   <a className={menuHoverBgColor}>Settings</a>
