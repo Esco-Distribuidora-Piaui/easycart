@@ -38,7 +38,7 @@ const Home = () => {
         <div className="flex">
           <FilterSidebar onFilterChange={handleFilterChange} />
           <div className="p-4 flex-grow">
-            <div className="productContainer">
+            <div className="productContainerAdmin">
               {filteredProducts.map((product) => (
                 <ProductCardAdmin key={product.id} product={product} />
               ))}
