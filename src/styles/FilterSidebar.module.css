@@ -1,6 +1,6 @@
 .sidebar {
     min-width: 200px;
-    padding: 16px;
+    padding: 20px;
     /* background-color: var(--page-bg-color); */
     border-right: 1px solid #ccc;
     font-weight: bold;
@@ -20,7 +20,11 @@
 .tagList li {
     padding: 8px;
     cursor: pointer;
-}
+    width: 100%;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   
 .tagList li:hover,
 .tagList li.selected {
