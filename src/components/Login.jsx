@@ -11,8 +11,8 @@ export default function Login({ onLogin }) {
       <div className="w-full max-w-md mx-auto p-8 bg-white rounded-lg shadow-md">
         <img
           alt="Sua Empresa"
-          src="/logo-esco.png"
-          className="mx-auto h-20 w-auto mb-6"
+          src="/img/logocompleta.svg"
+          className="mx-auto h-28 w-auto mb-6"
         />
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
           Entrar na sua conta

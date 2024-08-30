@@ -1,21 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import ToggleThemeButton from "./ToggleThemeButton";
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   const primaryColor = "var(--primary-color)";
   const headerBgColor = "var(--secondary-color)";
   const textColor = "var(--primary-color)";
@@ -29,20 +17,25 @@ const Header = () => {
 
   return (
     <>
-      <div
-        className="navbar"
-        style={{ backgroundColor: headerBgColor, color: textColor }}
-      >
+      <div className="navbar">
         <div className="flex-1 flex justify-between items-center">
-          <Link href="/" passHref>
-            <span className="btn btn-ghost text-xl flex items-center cursor-pointer">
-              <img
-                src="/WhatsApp_Image_2024-08-11_at_14.50.56-removebg-preview.png"
-                alt="Logo"
-                style={{ width: "150px", height: "45px" }} // Ajuste o tamanho conforme necessário
-              />
-            </span>
-          </Link>
+          {/* logo */}
+          <div className="flex items-center gap-2">
+            <Image
+              src="img/logosemletra.svg"
+              alt="logo easycart" // Texto alternativo
+              width={50} // Largura da imagem
+              height={30} // Altura da imagem
+              // layout="fill"
+            />
+            <Image
+              src="img/logocomnome.svg"
+              alt="logo nome easycart"
+              width={100}
+              height={30}
+            />
+          </div>
+          {/* barra de pesquisa    */}
           <div
             className="form-control flex justify-center"
             style={{ marginLeft: "-350px" }}
@@ -118,39 +111,16 @@ const Header = () => {
               </button>
             </form>
           </div>
+          {/* botão mudar tema  */}
+          <div>
+            <ToggleThemeButton />
+          </div>
+
           <div className="flex-none space-x-4 flex items-center">
-            {/* Adicionando o controle de tema com os ícones de sol e lua */}
             <label
               className="flex items-center cursor-pointer gap-2"
               style={{ marginLeft: "-350px" }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <circle cx="12" cy="12" r="5" />
-                <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-              </svg>
-              <input
-                type="checkbox"
-                checked={isDarkMode}
-                onChange={toggleDarkMode}
-                className="toggle theme-controller"
-                aria-label="Toggle dark mode"
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-            </label>
+            ></label>
             <div
               className="dropdown dropdown-end"
               style={{ marginLeft: "20px" }}
