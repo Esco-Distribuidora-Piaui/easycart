@@ -22,7 +22,6 @@
     position: relative;
     overflow: hidden;
     color: var(--primary-color);
-    box-shadow: 0 0 10px var(--primary-color) ;
 }
 
 .modalHeader {
@@ -30,7 +29,7 @@
     text-align: center;
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    border-bottom: var(--primary-color) 2px solid;
+    border-bottom: var(--primary-color) 1px solid;
     font-weight: bold;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -44,11 +43,13 @@
 }
 
 .modalImage {
-    flex: 0 0 40%;
-    position: relative;
+    flex: 0 0 45%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
 }
 
 .modalImage img {
@@ -60,7 +61,10 @@
 
 .modalDetails {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow-y: auto; /* Adiciona rolagem quando o conteúdo é muito grande */
 }
 
@@ -89,7 +93,7 @@
 
 .modalDetails p {
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .closeButton {
@@ -119,16 +123,13 @@
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: scale 0.3s ease;
 }
 
 .addToCartButton:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    font-weight: bold;
-    box-shadow: 0 0 10px var(--primary-color) ;
+    scale: 1.01;
 }
 
 .addToCartButton img {
