@@ -11,12 +11,6 @@ const Footer = () => (
             <a href="/contact" className="hover:underline">
               Contato
             </a>
-            <a href="/privacy-policy" className="hover:underline">
-              Política de Privacidade
-            </a>
-            <a href="/terms" className="hover:underline">
-              Termos de Serviço
-            </a>
           </nav>
         </div>
         <div className="flex flex-col gap-4 w-full md:w-1/3">

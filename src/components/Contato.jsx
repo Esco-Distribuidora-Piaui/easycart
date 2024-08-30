@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Contato = () => {
   return (
@@ -8,7 +8,8 @@ const Contato = () => {
         <div className="text-left">
           <h2 className="text-2xl font-bold mb-4">Ficou interessado?</h2>
           <p className="text-lg">
-            Entre em contato conosco preenchendo o formulário ao lado ou pelas nossas redes sociais.
+            Entre em contato conosco preenchendo o formulário ao lado ou pelas
+            nossas redes sociais.
           </p>
         </div>
 
@@ -16,7 +17,9 @@ const Contato = () => {
         <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
           <form>
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700">Nome</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Nome
+              </label>
               <input
                 type="text"
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
@@ -25,7 +28,9 @@ const Contato = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700">Email</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Email
+              </label>
               <input
                 type="email"
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
@@ -34,7 +39,9 @@ const Contato = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700">Mensagem</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Mensagem
+              </label>
               <textarea
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
                 placeholder="Sua mensagem"
