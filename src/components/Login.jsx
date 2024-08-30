@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../styles/Login.module.css";
 
 export default function Login({ onLogin }) {
   const handleSubmit = (event) => {
@@ -8,16 +7,14 @@ export default function Login({ onLogin }) {
   };
 
   return (
-    <div className={styles.loginContainer}>
-      <div className={styles.loginFormWrapper}>
+    <div className="flex justify-center items-center min-h-screen bg-gray-200 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-md mx-auto p-8 bg-white rounded-lg shadow-md">
         <img
           alt="Sua Empresa"
           src="/logo-esco.png"
-          className="mx-auto h-20 w-auto"
+          className="mx-auto h-20 w-auto mb-6"
         />
-        <h2
-          className={`text-2xl font-bold leading-9 tracking-tight ${styles.loginTitle}`}
-        >
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
           Entrar na sua conta
         </h2>
 
@@ -25,7 +22,7 @@ export default function Login({ onLogin }) {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium leading-6 text-black"
+              className="block text-sm font-medium text-gray-700"
             >
               Endereço de Email
             </label>
@@ -36,7 +33,7 @@ export default function Login({ onLogin }) {
                 type="email"
                 required
                 autoComplete="email"
-                className={`block w-full rounded-md border-0 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${styles.inputText}`}
+                className="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm hover:bg-gray-100 hover:border-indigo-600 hover:shadow-md transition duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -45,14 +42,14 @@ export default function Login({ onLogin }) {
             <div className="flex items-center justify-between">
               <label
                 htmlFor="password"
-                className="block text-sm font-medium leading-6 text-black"
+                className="block text-sm font-medium text-gray-700"
               >
                 Senha
               </label>
               <div className="text-sm">
                 <a
                   href="#"
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Esqueceu a senha?
                 </a>
@@ -65,7 +62,7 @@ export default function Login({ onLogin }) {
                 type="password"
                 required
                 autoComplete="current-password"
-                className={`block w-full rounded-md border-0 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${styles.inputText}`}
+                className="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm hover:bg-gray-100 hover:border-indigo-600 hover:shadow-md transition duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -73,12 +70,19 @@ export default function Login({ onLogin }) {
           <div>
             <button
               type="submit"
-              className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="w-full py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200 ease-in-out"
             >
               Entrar
             </button>
           </div>
         </form>
+
+        <p className="mt-6 text-center text-gray-500">
+          Não tem uma conta?{" "}
+          <a href="#" className="text-indigo-600 hover:text-indigo-500">
+            Inscreva-se
+          </a>
+        </p>
       </div>
     </div>
   );
