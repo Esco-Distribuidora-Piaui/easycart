@@ -20,8 +20,8 @@
 .productContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  justify-content: left;
+  gap: 3vh;
+  justify-content: space-evenly;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: 1fr;
   padding: 20px;
