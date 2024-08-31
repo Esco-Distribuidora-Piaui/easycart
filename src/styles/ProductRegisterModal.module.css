@@ -1,0 +1,145 @@
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 90%; 
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    color: var(--primary-color);
+}
+
+.modalHeader {
+    padding: 15px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.modalBody {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.modalDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modalDetails h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.modalDetails p {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.priceAndStatus {
+    display: flex;
+    gap: 10px;
+}
+
+.priceAndStatus > * { /* Todos os elementos filhos */
+    flex: 1;
+}
+
+.modalDetails select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.modalDetails select:focus, .modalDetails input:focus,
+.modalDetails textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.closeButton {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 2px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+    transform: scale(1.2);
+}
+
+.modalDetails input,
+.modalDetails textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.modalDetails textarea {
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.saveButton, .cancelButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: center;
+    transition: scale 0.3s ease;
+}
+
+.saveButton:hover, .cancelButton:hover {
+    scale: 1.01;
+}
