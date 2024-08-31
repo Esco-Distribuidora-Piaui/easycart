@@ -22,20 +22,19 @@ const Header = () => {
           {/* logo */}
           <div className="flex items-center gap-2">
             <Image
-              src="img/logosemletra.svg"
-              alt="logo easycart" // Texto alternativo
-              width={50} // Largura da imagem
-              height={30} // Altura da imagem
-              // layout="fill"
+              src="/img/logosemletra.svg"
+              alt="logo easycart"
+              width={50}
+              height={30}
             />
             <Image
-              src="img/logocomnome.svg"
+              src="/img/logocomnome.svg"
               alt="logo nome easycart"
               width={100}
               height={30}
             />
           </div>
-          {/* barra de pesquisa    */}
+          {/* barra de pesquisa */}
           <div
             className="form-control flex justify-center"
             style={{ marginLeft: "-350px" }}
@@ -84,34 +83,16 @@ const Header = () => {
                   borderRadius: "0 2px 2px 0",
                 }}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 512 512"
-                  preserveAspectRatio="xMidYMid meet"
-                  fill="currentColor"
-                  className="text-black"
-                >
-                  <g transform="translate(0,512) scale(0.1,-0.1)">
-                    <path
-                      d="M2031 4999 c-711 -54 -1354 -518 -1633 -1177 -279 -659 -178 -1408
-                    266 -1977 62 -79 214 -233 301 -305 591 -485 1416 -576 2114 -234 73 36 134
-                    64 136 62 19 -22 287 -353 492 -608 459 -571 450 -560 527 -600 61 -31 77 -35
-                    150 -35 72 0 89 4 146 32 36 18 106 69 157 113 189 166 233 302 153 466 -27
-                    55 -85 115 -488 510 -251 246 -493 482 -537 525 l-79 78 24 33 c111 148 224
-                    362 284 534 199 578 116 1215 -222 1720 -336 501 -873 815 -1476 864 -141 11
-                    -162 11 -315 -1z m442 -374 c313 -57 597 -202 829 -423 241 -231 396 -511 470
-                    -854 32 -149 32 -457 0 -604 -138 -640 -626 -1129 -1259 -1264 -125 -27 -382
-                    -37 -508 -21 -578 76 -1072 459 -1290 1002 -51 127 -90 276 -106 413 -15 127
-                    -6 350 20 478 136 671 676 1187 1341 1284 119 17 380 11 503 -11z"
-                    />
-                  </g>
-                </svg>
+                <Image
+                  src="/img/find.svg" // Substitua pelo caminho correto da sua imagem
+                  alt="Buscar"
+                  width={20}
+                  height={20}
+                />
               </button>
             </form>
           </div>
-          {/* botão mudar tema  */}
+          {/* botão mudar tema */}
           <div>
             <ToggleThemeButton />
           </div>
@@ -131,20 +112,12 @@ const Header = () => {
                 className={`btn btn-ghost btn-circle ${hoverBgColor}`}
               >
                 <div className="indicator">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
+                  <Image
+                    src="/img/cart-icon.png" // Substitua pelo caminho correto da sua imagem
+                    alt="Carrinho"
+                    width={20}
+                    height={20}
+                  />
                   <span
                     className={`badge badge-sm indicator-item ${indicatorBgColor} ${textColor}`}
                   >
@@ -176,33 +149,12 @@ const Header = () => {
                 role="button"
                 className={`btn btn-ghost btn-circle avatar ${hoverBgColor}`}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="38"
-                  height="38"
-                  viewBox="0 0 512 512"
-                  preserveAspectRatio="xMidYMid meet"
-                  fill="currentColor"
-                >
-                  <g transform="translate(0,512) scale(0.1,-0.1)">
-                    <path
-                      d="M2380 5114 c-19 -2 -78 -9 -130 -14 -330 -36 -695 -160 -990 -336
-                      -375 -224 -680 -529 -904 -904 -175 -292 -291 -632 -338 -990 -16 -123 -16
-                      -497 0 -620 82 -623 356 -1150 820 -1581 256 -239 575 -425 922 -539 274 -91
-                      491 -124 800 -124 228 0 329 9 530 50 689 141 1304 583 1674 1204 175 292 291
-                      632 338 990 16 123 16 497 0 620 -47 358 -163 698 -338 990 -224 375 -529 680
-                      -904 904 -289 173 -634 291 -980 336 -88 12 -438 21 -500 14z m405 -1124 c247
-                      -64 468 -245 580 -475 70 -142 88 -224 88 -395 0 -118 -4 -160 -22 -225 -68
-                      -251 -246 -468 -476 -580 -91 -45 -223 -85 -278 -85 -60 0 -18 -10 100 -25
-                      529 -66 994 -354 1287 -799 78 -118 180 -329 171 -355 -3 -11 -52 -63 -107
-                      -116 -340 -323 -748 -528 -1208 -606 -113 -19 -172 -23 -360 -23 -188 0 -247
-                      4 -360 23 -460 78 -868 283 -1208 606 -55 53 -104 105 -107 116 -9 26 93 237
-                      171 355 293 445 758 733 1287 799 118 15 160 25 100 25 -55 0 -187 40 -278 85
-                      -230 112 -408 329 -476 580 -18 65 -22 107 -22 225 0 171 18 253 88 395 123
-                      253 366 437 642 490 105 20 282 13 388 -15z"
-                    />
-                  </g>
-                </svg>
+                <Image
+                  src="/img/user.svg" // Substitua pelo caminho correto da sua imagem
+                  alt="Usuário"
+                  width={38}
+                  height={38}
+                />
               </div>
               <ul
                 tabIndex={0}
@@ -210,12 +162,10 @@ const Header = () => {
               >
                 <li>
                   <Link href="/admin" passHref>
-                    {/* <a className={`justify-between ${menuHoverBgColor}`}> */}
                     Meus Produtos
                     <span className={`badge ${badgeBgColor} ${textColor}`}>
                       New
                     </span>
-                    {/* </a> */}
                   </Link>
                 </li>
                 <li>
