@@ -1,8 +1,10 @@
+.container {
+    display: flex;
+}
+  
 .sidebar {
     min-width: 200px;
     padding: 20px;
-    /* background-color: var(--page-bg-color); */
-    border-right: 1px solid #ccc;
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -10,6 +12,12 @@
     overflow-y: auto;
     max-height: 80vh;
     margin-top: 60px;
+}
+  
+.separator {
+    height: 90%;
+    border-right: 1px solid #ccc;
+    margin-top: 30px;
 }
   
 .tagList {
@@ -24,11 +32,10 @@
     max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+}
   
 .tagList li:hover,
 .tagList li.selected {
     background-color: var(--primary-color);
     color: white;
 }
-  

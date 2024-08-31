@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styles from '../styles/FilterSidebar.module.css';
-import Image from 'next/image';
 
 const FilterSidebar = ({ onFilterChange }) => {
   const [selectedTags, setSelectedTags] = useState([]);
@@ -16,20 +15,23 @@ const FilterSidebar = ({ onFilterChange }) => {
   };
 
   return (
-    <aside className={styles.sidebar}>
-      <h2>Filtros:</h2>
-      <ul className={styles.tagList}>
-        {tags.map(tag => (
-          <li
-            key={tag}
-            className={selectedTags.includes(tag) ? styles.selected : ''}
-            onClick={() => handleTagClick(tag)}
-          >
-            {tag}
-          </li>
-        ))}
-      </ul>
-    </aside>
+    <div className={styles.container}>
+      <aside className={styles.sidebar}>
+        <h2>Filtros:</h2>
+        <ul className={styles.tagList}>
+          {tags.map(tag => (
+            <li
+              key={tag}
+              className={selectedTags.includes(tag) ? styles.selected : ''}
+              onClick={() => handleTagClick(tag)}
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </aside>
+      <div className={styles.separator}></div>
+    </div>
   );
 };
 
