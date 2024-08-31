@@ -3,7 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { exampleProducts } from "../produtos/exemplos";
+import { exampleProducts } from "../../../produtos/exemplos";
 
 const Home = () => {
   const [products, setProducts] = useState(exampleProducts);

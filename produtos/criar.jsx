@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import api from '../../services/api';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import api from '../src/services/api';
+import Header from '../src/components/Header';
+import Footer from '../src/components/Footer';
 
 const CreateProduct = () => {
   const [name, setName] = useState('');
