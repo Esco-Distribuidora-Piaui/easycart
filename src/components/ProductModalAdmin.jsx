@@ -104,7 +104,10 @@ const ProductModalAdmin = ({ product, onClose, onSave }) => {
                 </select>
               </label>
             </div>
-            <button type="submit" className={styles.saveButton}>Salvar</button>
+            <div className={styles.actions}>
+              <button type="submit" className={styles.saveButton}>Salvar</button>
+              <button type="button" className={styles.cancelButton} onClick={onClose}>Cancelar</button>
+            </div>
           </div>
         </form>
       </div>

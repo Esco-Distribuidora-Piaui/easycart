@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 3vh;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: 1fr;
