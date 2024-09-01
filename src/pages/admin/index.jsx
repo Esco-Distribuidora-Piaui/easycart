@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { exampleProducts } from "../../../produtos/exemplos";
+import ProductRegisterModal from "@/components/ProductRegisterModal";
 
 const Home = () => {
   const [products, setProducts] = useState(exampleProducts);
   const [filteredProducts, setFilteredProducts] = useState(exampleProducts);
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -31,6 +33,21 @@ const Home = () => {
     setFilteredProducts(newFilteredProducts);
   };
 
+  const handleOpenRegisterModal = () => {
+    setIsRegisterModalOpen(true);
+  };
+
+  const handleCloseRegisterModal = () => {
+    setIsRegisterModalOpen(false);
+  };
+
+  const handleSaveProduct = (newProduct) => {
+    // lógica para salvar o produto
+    setProducts([...products, newProduct]);
+    setFilteredProducts([...filteredProducts, newProduct]);
+    handleCloseRegisterModal();
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -39,6 +56,13 @@ const Home = () => {
           <FilterSidebar onFilterChange={handleFilterChange} />
           <div className="p-4 flex-grow">
             <div className="productContainerAdmin">
+            <button 
+                type="button" 
+                className="register" 
+                onClick={handleOpenRegisterModal}
+              >
+                Cadastrar Produto
+              </button>
               {filteredProducts.map((product) => (
                 <ProductCardAdmin key={product.id} product={product} />
               ))}
@@ -50,6 +74,12 @@ const Home = () => {
         </div>{" "}
       </main>
       <Footer />
+      {isRegisterModalOpen && (
+        <ProductRegisterModal 
+          onClose={handleCloseRegisterModal} 
+          onSave={handleSaveProduct}
+        />
+      )}
     </div>
   );
 };
