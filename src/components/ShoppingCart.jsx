@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {useCart} from '../contexts/CartContext';
+import { formatCartMessage, sendMessage } from '../contexts/EnviarPedido';
 
 const ShoppingCart = ({ isOpen, onClose }) => {
   const { cartItems, removeFromCart } = useCart();
@@ -11,6 +12,16 @@ const ShoppingCart = ({ isOpen, onClose }) => {
   const handleQuantityChange = (id, newQuantity) => {
     setQuantity(newQuantity);
     updateQuantity(id, newQuantity);
+  };
+
+  const handleSendOrder = () => {
+    if (cartItems.length === 0) {
+        alert('Seu carrinho está vazio. Adicione itens ao carrinho antes de enviar um pedido.');
+        return;
+    }
+    
+    const message = formatCartMessage(cartItems);
+    sendMessage(message);
   };
 
   return (
@@ -77,7 +88,7 @@ const ShoppingCart = ({ isOpen, onClose }) => {
                 </div>
                 <p className="mt-0.5 text-sm text-gray-500">Forma de retirada e pagamento tratar com o vendedor</p>
                 <div className="mt-6">
-                  <a href="#" className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Enviar Pedido</a>
+                  <a href="#" onClick={handleSendOrder} className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Enviar Pedido</a>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                   <p>
