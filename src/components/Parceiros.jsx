@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Parceiros = () => {
   const router = useRouter();
@@ -10,8 +11,7 @@ const Parceiros = () => {
     { nome: "Loja 3", categoria: "Serviços" },
     { nome: "Loja 4", categoria: "Camping" },
     { nome: "Loja 5", categoria: "Moda" },
-    { nome: "Loja 6", categoria: "Eletrônicos" },
-    // Adicione mais parceiros conforme necessário
+    { nome: "Loja 6", categoria: "Eletrônicos" }
   ];
 
   const handleCardClick = (path) => {
@@ -31,8 +31,10 @@ const Parceiros = () => {
             >
               <div className="bg-gray-200 w-full h-32 mb-4 rounded-lg flex items-center justify-center">
                 {/* Aqui você pode colocar a imagem do parceiro */}
-                <img
-                  src="/placeholder-image.svg"
+                <Image
+                  src="img/storefront.svg"
+                  width={0}
+                  height={0}
                   alt={parceiro.nome}
                   className="h-16 w-16"
                 />

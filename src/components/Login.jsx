@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Login({ onLogin }) {
   const handleSubmit = (event) => {
@@ -9,10 +10,12 @@ export default function Login({ onLogin }) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-200 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md mx-auto p-8 bg-white rounded-lg shadow-md">
-        <img
+        <Image
           alt="Sua Empresa"
           src="/img/logocompleta.svg"
-          className="mx-auto h-28 w-auto mb-6"
+          width={100}
+          height={70}
+          className="mx-auto h-36 w-auto mb-2"
         />
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
           Entrar na sua conta

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {useCart} from '../contexts/CartContext';
 import { formatCartMessage, sendMessage } from '../contexts/EnviarPedido';
+import Image from 'next/image';
 
 const ShoppingCart = ({ isOpen, onClose }) => {
   const { cartItems, removeFromCart } = useCart();
@@ -51,7 +52,13 @@ const ShoppingCart = ({ isOpen, onClose }) => {
                       {cartItems.map((item) => (
                         <li key={item.id} className="flex py-6">
                           <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                            <img src={item.image} alt={item.name} className="h-full w-full object-cover object-center" />
+                            <Image
+                            src={item.image} 
+                            alt={item.name} 
+                            width={0}
+                            height={0}
+                            className="h-full w-full object-cover object-center" 
+                            />
                           </div>
                           <div className="ml-4 flex flex-1 flex-col">
                             <div>
