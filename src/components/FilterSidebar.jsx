@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../styles/FilterSidebar.module.css';
+import { exampleProducts } from "../../produtos/exemplos";
 
 const FilterSidebar = ({ onFilterChange }) => {
   const [selectedTags, setSelectedTags] = useState([]);
 
-  const tags = ["Papel", "Capa para encadernação", "Polaseal"]; 
+  const tags = [...new Set(exampleProducts.map(product => product.tag))]; 
 
   const handleTagClick = (tag) => {
     const newTags = selectedTags.includes(tag)
@@ -17,7 +18,7 @@ const FilterSidebar = ({ onFilterChange }) => {
   return (
     <div className={styles.container}>
       <aside className={styles.sidebar}>
-        <h2>Filtros:</h2>
+        <h2 className={styles.titulo}>Filtros:</h2>
         <ul className={styles.tagList}>
           {tags.map(tag => (
             <li
