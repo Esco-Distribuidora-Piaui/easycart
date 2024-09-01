@@ -1,0 +1,33 @@
+.sortByContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 32px; 
+    margin-top: 10px;
+}
+  
+.label {
+    font-size: 1rem;
+    color: #333;
+}
+  
+.select {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+  
+.select:hover {
+    border-color: #888;
+}
+  
+.select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+  
