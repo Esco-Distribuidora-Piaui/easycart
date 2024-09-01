@@ -35,5 +35,40 @@ export const exampleProducts = [
     status: 'Disponível',
     tag: 'Papel'
   },
-  
+  {
+    id: '5',
+    name: 'Produto 5',
+    price: 'R$ 100,00',
+    description: 'Produto 5 - Descrição do produto 5',
+    image: '/img/papel cartão.webp',
+    status: 'Disponível',
+    tag: 'Polaseal'
+  },
+  {
+    id: '6',
+    name: 'Produto 6',
+    price: 'R$ 35,00',
+    description: 'Produto 6 - Descrição do produto 6',
+    image: '/img/papel cartão.webp',
+    status: 'Disponível',
+    tag: 'Capa para encadernação'
+  },
+  {
+    id: '7',
+    name: 'Produto 7',
+    price: 'R$ 8,00',
+    description: 'Produto 7 - Descrição do produto 7',
+    image: '/img/papel cartão.webp',
+    status: 'Indisponível',
+    tag: 'Capa para encadernação'
+  },
+  {
+    id: '8',
+    name: 'Produto 8',
+    price: 'R$ 70,00',
+    description: 'Produto 8 - Descrição do produto 8',
+    image: '',
+    status: 'Disponível',
+    tag: 'Polaseal'
+  },
 ];
