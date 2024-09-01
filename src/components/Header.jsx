@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import ToggleThemeButton from "./ToggleThemeButton";
 import styles from "../styles/Header.module.css"; // Importando o CSS corretamente
+import ShoppingCart from "./ShoppingCart";
 
 const Header = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
+
   return (
     <>
       <div className={styles.navbar}>
@@ -87,9 +91,9 @@ const Header = () => {
                   <span className="text-lg font-bold">8 Items</span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
-                      View cart
-                    </button>
+                  <button onClick={toggleCart}>
+                    Ver Carrinho
+                  </button>
                   </div>
                 </div>
               </div>
@@ -135,6 +139,7 @@ const Header = () => {
         className="w-full h-[2px]"
         style={{ backgroundColor: "var(--primary-color)" }}
       ></div>
+      <ShoppingCart isOpen={isCartOpen} onClose={toggleCart} />
     </>
   );
 };
