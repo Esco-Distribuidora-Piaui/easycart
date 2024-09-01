@@ -4,10 +4,12 @@ import Image from "next/image";
 import ToggleThemeButton from "./ToggleThemeButton";
 import styles from "../styles/Header.module.css"; // Importando o CSS corretamente
 import ShoppingCart from "./ShoppingCart";
+import {useCart} from '../contexts/CartContext';
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const toggleCart = () => setIsCartOpen(!isCartOpen);
+  const { cartItems } = useCart();
 
   return (
     <>
@@ -79,7 +81,7 @@ const Header = () => {
                     height={20}
                   />
                   <span className="badge badge-sm indicator-item bg-red-600 text-primary">
-                    8
+                  {cartItems.length}
                   </span>
                 </div>
               </div>
@@ -88,8 +90,18 @@ const Header = () => {
                 className={`card card-compact dropdown-content bg-white text-primary z-[1] mt-3 w-52 shadow`}
               >
                 <div className="card-body">
-                  <span className="text-lg font-bold">8 Items</span>
-                  <span className="text-info">Subtotal: $999</span>
+                  <span className="text-lg font-bold">
+                    {cartItems.length} Produto(s)
+                  </span>
+                  <span className="text-info">
+                    <p>Subtotal:
+                    R$
+                    {cartItems.reduce((total, item) => {
+                    const priceNumber = parseFloat(item.price.replace('R$', '').replace(',', '.').trim());
+                    return total + priceNumber * item.quantity;
+                    }, 0).toFixed(2)}
+                </p>
+                  </span>
                   <div className="card-actions">
                   <button onClick={toggleCart}>
                     Ver Carrinho
