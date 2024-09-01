@@ -1,8 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/ProductModal.module.css';
+import { useCart } from '../contexts/CartContext';
 
 const ProductModal = ({ product, onClose }) => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    onClose();
+  };
+
   return (
     <div className={styles.modalBackdrop} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -29,7 +37,7 @@ const ProductModal = ({ product, onClose }) => {
                 <p><strong>Preço:</strong> {product.price}</p>
                 <p><strong>Status:</strong> {product.status}</p>
               </div>
-              <button className={styles.addToCartButton}>
+              <button className={styles.addToCartButton} onClick={handleAddToCart}>
                   <Image 
                   src="/icons/cart.svg" 
                   alt="Adicionar ao Carrinho" 
