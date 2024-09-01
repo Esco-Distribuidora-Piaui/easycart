@@ -55,9 +55,9 @@ const ShoppingCart = ({ isOpen, onClose }) => {
                             <Image
                             src={item.image} 
                             alt={item.name} 
-                            width={0}
-                            height={0}
-                            className="h-full w-full object-cover object-center" 
+                            width={300}
+                            height={300}
+                            className="h-full w-full object-contain object-center" 
                             />
                           </div>
                           <div className="ml-4 flex flex-1 flex-col">
