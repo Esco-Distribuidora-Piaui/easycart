@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ToggleThemeButton from "./ToggleThemeButton";
 import ShoppingCart from "./ShoppingCart";
-import { useCart } from '../contexts/CartContext';
+import { useCart } from "../contexts/CartContext";
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -49,13 +49,11 @@ const Header = () => {
               aria-expanded="false"
               role="combobox"
             />
-            <button type="submit" className="w-12 h-10 bg-white rounded-r flex justify-center items-center shadow-md">
-              <Image
-                src="/img/find.svg"
-                alt="Buscar"
-                width={20}
-                height={20}
-              />
+            <button
+              type="submit"
+              className="w-12 h-10 bg-white rounded-r flex justify-center items-center shadow-md"
+            >
+              <Image src="/img/find.svg" alt="Buscar" width={35} height={20} />
             </button>
           </form>
         </div>
@@ -91,18 +89,20 @@ const Header = () => {
                   {cartItems.length} Produto(s)
                 </span>
                 <span className="text-info">
-                  <p>Subtotal:
-                    R$
-                    {cartItems.reduce((total, item) => {
-                      const priceNumber = parseFloat(item.price.replace('R$', '').replace(',', '.').trim());
-                      return total + priceNumber * item.quantity;
-                    }, 0).toFixed(2)}
+                  <p>
+                    Subtotal: R$
+                    {cartItems
+                      .reduce((total, item) => {
+                        const priceNumber = parseFloat(
+                          item.price.replace("R$", "").replace(",", ".").trim()
+                        );
+                        return total + priceNumber * item.quantity;
+                      }, 0)
+                      .toFixed(2)}
                   </p>
                 </span>
-                 <div className="card-actions">
-                  <button onClick={toggleCart}>
-                    Ver Carrinho
-                  </button>
+                <div className="card-actions">
+                  <button onClick={toggleCart}>Ver Carrinho</button>
                 </div>
               </div>
             </div>
@@ -115,12 +115,7 @@ const Header = () => {
               role="button"
               className="btn btn-ghost btn-circle avatar hover:bg-gray-400"
             >
-              <Image
-                src="/img/user.svg"
-                alt="Usuário"
-                width={38}
-                height={38}
-              />
+              <Image src="/img/user.svg" alt="Usuário" width={38} height={38} />
             </div>
             <ul
               tabIndex={0}
