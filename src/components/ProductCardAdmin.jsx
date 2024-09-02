@@ -33,6 +33,7 @@ const ProductCardAdmin = ({ product }) => {
             layout="responsive" 
           />
         </div>
+        <div className={styles.separator}></div>
         <div className={styles.productCardDetails}>
           <h2>{product.name}</h2>
           <p>{product.description}</p>
