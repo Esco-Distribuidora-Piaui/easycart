@@ -85,10 +85,10 @@ const Header = () => {
               className="card card-compact dropdown-content bg-white text-primary z-[1] mt-3 w-52 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold">
+                <span className="text-lg text-black font-bold">
                   {cartItems.length} Produto(s)
                 </span>
-                <span className="text-info">
+                <span className="text-black">
                   <p>
                     Subtotal: R$
                     {cartItems
