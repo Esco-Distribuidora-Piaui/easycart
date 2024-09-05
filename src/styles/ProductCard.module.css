@@ -1,94 +1,95 @@
 .productCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    width: 40vh;
-    height: 60vh;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: var(--primary-color);
-    transition: transform 0.2s ease;
-    position: relative;
-}  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 40vh;
+  height: 60vh;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--primary-color);
+  transition: transform 0.2s ease;
+  position: relative;
+}
 
 .productCard:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: var(--primary-color) 0 0 10px;
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: var(--primary-color) 0 0 10px;
 }
 
 .imageWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
-    width: 100%;
-    overflow: hidden;
-}  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
 
-.productImage{
-    flex: 0 1 40%; /* 40% do espaço disponível */
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.productImage {
+  flex: 0 1 40%; /* 40% do espaço disponível */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .productCard img {
-    padding: 5px;
+  padding: 5px;
 }
 
 .productInfo {
-    margin-top: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} 
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .productName {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 8px; 
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;  
-    text-overflow: ellipsis; 
-    max-width: 175px; 
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 175px;
 }
 
 .productPrice {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .productStatus {
-    font-size: 0.8rem;
-    color: #228B22;
-    font-weight: bold;
+  font-size: 0.8rem;
+  color: #228b22;
+  font-weight: bold;
 }
 
 .cartIcon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    opacity: 0;
-    transition: opacity 0.2s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .detailsIcon {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    opacity: 0;
-    transition: opacity 0.2s ease;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-.productCard:hover .cartIcon, .productCard:hover .detailsIcon {
-    opacity: 1;
+.productCard:hover .cartIcon,
+.productCard:hover .detailsIcon {
+  opacity: 1;
 }

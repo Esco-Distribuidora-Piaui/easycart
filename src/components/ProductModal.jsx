@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import styles from '../styles/ProductModal.module.css';
-import { useCart } from '../contexts/CartContext';
+import React from "react";
+import Image from "next/image";
+import styles from "../styles/ProductModal.module.css";
+import { useCart } from "../contexts/CartContext";
 
 const ProductModal = ({ product, onClose }) => {
   const { addToCart } = useCart();
@@ -14,15 +14,17 @@ const ProductModal = ({ product, onClose }) => {
   return (
     <div className={styles.modalBackdrop} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>x</button>
+        <button className={styles.closeButton} onClick={onClose}>
+          x
+        </button>
         <div className={styles.modalHeader}>
           <h1>Detalhes do Produto</h1>
         </div>
         <div className={styles.modalBody}>
           <div className={styles.modalImage}>
-            <Image 
-              src={product.image} 
-              alt={product.name} 
+            <Image
+              src={product.image}
+              alt={product.name}
               width={300}
               height={300}
               layout="responsive"
@@ -34,17 +36,25 @@ const ProductModal = ({ product, onClose }) => {
             <h4>{product.description}</h4>
             <div className={styles.cart}>
               <div>
-                <p><strong>Preço:</strong> {product.price}</p>
-                <p><strong>Status:</strong> {product.status}</p>
+                <p>
+                  <strong>Preço:</strong> {product.price}
+                </p>
+                <p>
+                  <strong>Status:</strong> {product.status}
+                </p>
               </div>
-              <button className={styles.addToCartButton} onClick={handleAddToCart}>
-                  <Image 
-                  src="/icons/cart.svg" 
-                  alt="Adicionar ao Carrinho" 
-                  width={30} 
-                  height={30} 
+              <button
+                className={styles.addToCartButton}
+                onClick={handleAddToCart}
+              >
+                <Image
+                  src="/icons/shopping_cart_40dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg"
+                  alt="Adicionar ao Carrinho"
+                  width={30}
+                  height={30}
                 />
-                Adicionar ao Carrinho</button>
+                Adicionar ao Carrinho
+              </button>
             </div>
           </div>
         </div>
