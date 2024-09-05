@@ -122,13 +122,16 @@ const Header = () => {
               className="menu menu-sm dropdown-content bg-white text-primary rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
+                <Link href="/Login" passHref>
+                  Login
+                </Link>
                 <Link href="/admin" passHref>
                   Meus Produtos
-                  <span className="badge bg-green-600 text-primary">New</span>
+                  <span className="badge bg-green-600 text-white">Novo</span>
                 </Link>
               </li>
               <li>
-                <a className="hover:bg-gray-200">Settings</a>
+                <a className="hover:bg-gray-200">Configurações</a>
               </li>
               <li>
                 <a className="hover:bg-gray-200">Logout</a>

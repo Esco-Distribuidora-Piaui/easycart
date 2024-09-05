@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Login({ onLogin }) {
   const handleSubmit = (event) => {
@@ -82,9 +83,13 @@ export default function Login({ onLogin }) {
 
         <p className="mt-6 text-center text-gray-500">
           Não tem uma conta?{" "}
-          <a href="#" className="text-indigo-600 hover:text-indigo-500">
+          <Link
+            href="/cadastro"
+            className="text-indigo-600 hover:text-indigo-500"
+            passHref
+          >
             Inscreva-se
-          </a>
+          </Link>
         </p>
       </div>
     </div>
