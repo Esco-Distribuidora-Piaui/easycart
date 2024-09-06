@@ -19,8 +19,8 @@ const ProductCardAdmin = ({ product }) => {
   };
 
   return (
-    <>
-      <div className="group flex flex-row border border-gray-300 rounded-lg overflow-hidden bg-white shadow-sm w-full text-blue-600 max-w-none p-2 items-center relative justify-between transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-primary-color hover:shadow-sm h-[100px]">  
+    <div className='flex justify-center item-center'>
+      <div className="group flex flex-row border border-gray-300 rounded-lg overflow-hidden bg-white shadow-sm w-[90%] text-blue-600 max-w-none p-2 items-center relative justify-between transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-primary-color hover:shadow-sm h-[100px]">  
         {/* Card principal com borda, sombra e efeito hover */}
         <div className="flex-none w-[100px] h-auto object-cover mr-5"> {/* Imagem do produto */}
           <Image 
@@ -65,7 +65,7 @@ const ProductCardAdmin = ({ product }) => {
           onSave={handleSave}
         />
       )}
-    </>
+    </div>
   );
 };
 

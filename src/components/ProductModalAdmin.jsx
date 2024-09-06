@@ -110,11 +110,11 @@ const ProductModalAdmin = ({ product, onClose, onSave }) => {
               </label>
             </div>
             <div className="flex justify-center gap-4 mt-4">
-              <button type="submit" className="bg-blue-600 text-white border-none p-2 rounded-lg cursor-pointer text-lg font-bold transition-transform duration-300 ease-in-out hover:scale-105">
-                Salvar
-              </button>
-              <button type="button" className="bg-blue-600 text-white border-none p-2 rounded-lg cursor-pointer text-lg font-bold transition-transform duration-300 ease-in-out hover:scale-105" onClick={onClose}>
+              <button type="button" className="bg-red-600 text-white border-none p-3 rounded-lg cursor-pointer text-lg font-bold transition-transform duration-300 ease-in-out hover:scale-105" onClick={onClose}>
                 Cancelar
+              </button>
+              <button type="submit" className="bg-green-600 text-white border-none p-3 rounded-lg cursor-pointer text-lg font-bold transition-transform duration-300 ease-in-out hover:scale-105">
+                Salvar
               </button>
             </div>
           </div>
