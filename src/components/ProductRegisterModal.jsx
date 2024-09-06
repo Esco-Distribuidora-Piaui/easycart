@@ -124,8 +124,8 @@ const ProductRegisterModal = ({ onClose, onSave }) => {
                 </label>
               </div>
               <div className="flex justify-center gap-4 mt-4">
-                <button type="submit" className="bg-blue-600 text-white border-none py-2 px-4 rounded-md cursor-pointer text-base transition-transform transform hover:scale-105">Cadastrar</button>
-                <button type="button" className="bg-blue-600 text-white border-none py-2 px-4 rounded-md cursor-pointer text-base transition-transform transform hover:scale-105" onClick={onClose}>Cancelar</button>
+                <button type="button" className="bg-red-600 text-white border-none py-2 px-4 rounded-md cursor-pointer text-base transition-transform transform hover:scale-105" onClick={onClose}>Cancelar</button>
+                <button type="submit" className="bg-green-600 text-white border-none py-2 px-4 rounded-md cursor-pointer text-base transition-transform transform hover:scale-105">Cadastrar</button>
               </div>
             </div>
           </form>
