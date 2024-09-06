@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
   return (
     <>
       <div
-        className="relative flex flex-col justify-center items-center border border-gray-300 rounded-lg p-2 w-64 h-96 shadow-lg text-center transition-transform duration-200 ease-in-out hover:scale-105 group"
+        className="relative flex flex-col justify-center items-center border border-gray-300 rounded-lg p-2 w-64 h-96 shadow-lg text-center transition-transform duration-200 ease-in-out hover:scale-105 group cursor-pointer"
         onClick={openModal}
       >
         <div className="flex justify-center items-center h-40 w-full overflow-hidden">

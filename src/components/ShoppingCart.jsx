@@ -95,11 +95,11 @@ const ShoppingCart = ({ isOpen, onClose }) => {
                 </div>
                 <p className="mt-0.5 text-sm text-gray-500">Forma de retirada e pagamento tratar com o vendedor</p>
                 <div className="mt-6">
-                  <a href="#" onClick={handleSendOrder} className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Enviar Pedido</a>
+                  <a href="#" onClick={handleSendOrder} className="flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm transition-transform transform hover:scale-105">Enviar Pedido</a>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                   <p>
-                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500" onClick={onClose}>
+                    <button type="button" className="font-medium text-blue-600" onClick={onClose}>
                       Continuar Comprando<span aria-hidden="true"> &rarr;</span>
                     </button>
                   </p>

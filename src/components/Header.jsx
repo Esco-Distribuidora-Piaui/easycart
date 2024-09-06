@@ -75,7 +75,7 @@ const Header = () => {
                   width={35}
                   height={20}
                 />
-                <span className="badge badge-sm indicator-item bg-red-600 text-primary">
+                <span className="badge badge-sm indicator-item bg-blue-600 text-white">
                   {cartItems.length}
                 </span>
               </div>
@@ -119,7 +119,7 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-white text-primary rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-white text-blue-600 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
                 <Link href="/Login" passHref>
@@ -141,7 +141,7 @@ const Header = () => {
         </div>
       </div>
       {/* linha horizontal embaixo do header */}
-      <div className="w-full h-[2px] bg-primary"></div>
+      <div className="w-full h-[2px] bg-blue-600"></div>
       <ShoppingCart isOpen={isCartOpen} onClose={toggleCart} />
     </>
   );

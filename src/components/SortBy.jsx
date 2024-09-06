@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "../styles/SortBy.module.css";
 
 const SortBy = ({ onSortChange }) => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -11,15 +10,17 @@ const SortBy = ({ onSortChange }) => {
   };
 
   return (
-    <div className={styles.sortByContainer}>
-      <label htmlFor="sort-options" className={styles.label}>
+    <div className="flex items-center gap-2 mr-8 mt-2"> {/* Container principal para alinhar o label e select */}
+      <label htmlFor="sort-options" className="text-base text-gray-800"> {/* Label para o select */}
         Ordenar por:
       </label>
+      
+      {/* Estilização do select: largura, padding, cor de fundo, borda e transições */}
       <select
         id="sort-options"
         value={selectedOption}
         onChange={handleSortChange}
-        className={styles.select}
+        className="w-[200px] p-2 text-base border border-gray-300 rounded bg-white transition-colors cursor-pointer hover:border-gray-500 focus:border-blue-600 focus:outline-none"
       >
         <option value="">Mais relevantes</option>
         <option value="price-asc">Preço: menor para maior</option>
