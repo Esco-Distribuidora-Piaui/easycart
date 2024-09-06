@@ -26,7 +26,7 @@ const Parceiros = () => {
           {parceiros.map((parceiro, index) => (
             <div
               key={index}
-              className="min-w-[200px] max-w-[200px] border rounded-lg shadow-md p-4 flex flex-col items-center"
+              className="min-w-[200px] max-w-[200px] border rounded-lg shadow-md p-4 flex flex-col items-center cursor-pointer"
               onClick={() => handleCardClick(parceiro.path)}
             >
               <div className="bg-gray-200 w-full h-32 mb-4 rounded-lg flex items-center justify-center">
