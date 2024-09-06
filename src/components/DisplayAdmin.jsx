@@ -77,7 +77,7 @@ const DisplayAdmin = () => {
   };
 
   return (
-    <main className="flex-grow">
+    <main className="flex-grow min-h-screen">
         <div className="flex">
           <FilterSidebar onFilterChange={handleFilterChange} />
           <div className="p-4 flex-grow">
